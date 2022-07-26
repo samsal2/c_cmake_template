@@ -32,17 +32,17 @@ target_compile_options(${PROJECT_NAME} PUBLIC
 		-Walloca 
 		-Wvla 
 		-fdiagnostics-color=always
-  ">"
+	">"
 	"$<$<AND:$<COMPILE_LANG_AND_ID:CXX,Clang,AppleClang>,$<CONFIG:Debug>>:"
 		-O0
 		-g
 		-fsanitize=address
 		-fsanitize=undefined
 		-fsanitize=bounds
-  ">"
+	">"
 	"$<$<AND:$<COMPILE_LANG_AND_ID:CXX,Clang,AppleClang>,$<CONFIG:Release>>:"
 		-Ofast
-  ">")
+	">")
 
 # link options
 target_link_options(${PROJECT_NAME} PUBLIC
@@ -50,5 +50,5 @@ target_link_options(${PROJECT_NAME} PUBLIC
 		-fsanitize=address
 		-fsanitize=undefined
 		-fsanitize=bounds
-  ">")
+	">")
 
